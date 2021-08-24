@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='dark'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil CTF</title>
+  <link rel="icon" type="image/png"
+    href="https://3cdhsv4crsio1kakza23qz4h-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/PNG_OWASP-AppSec.png" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/util.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3ea20092d3.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body class="u-body" style="overflow: hidden;">
+
+
+  <div id="loading">
+    <div class="preloader">
+      <div class="boxes">
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="darktheme">
+    <div class="darktheme__container " id="dark__theme">
+      <input class="input__dark" type="checkbox" id="switch" name="theme" />
+      <label class="label__dark" for="switch">Toggle</label>
+    </div>
+
+  </section>
+
+  <img style="size: 100%; position: absolute; z-index: -1; background-size: contain;" src="./img/confettin-bg-2.svg"
+    alt="">
+  <img style="size: 100%; position: absolute; z-index: -1;background-size: contain;" src="./img/confettin-bg-3.svg"
+    alt="">
+
+
+    <div class="nav-respo">
+      <button class="btn btn-hamburger" onclick="hamburger(event)">
+        <span class="line"></span>
+      </button>
+      <div class="menu">
+        <ul>
+          <li class="nav-respo__item">
+            <a href="./index.html" class="nav-respo__link" onclick="return hamburger()">
+              Home
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./about.html" class="nav-respo__link" onclick="return hamburger()">
+              About
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./rules.html" class="nav-respo__link" onclick="return hamburger()">
+              Rules
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./registration.html" class="nav-respo__link" onclick="return hamburger()">
+              Registration
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./challenges.html" class="nav-respo__link" onclick="return hamburger()">
+              Challenges
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./scoreboard.html" class="nav-respo__link" onclick="return hamburger()">
+              scoreboard
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./help.html" class="nav-respo__link" onclick="return hamburger()">
+              FAQs
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./team.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Team
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./sponsors.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Sponsors
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navigation">
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./about.html" class="navigation__link">
+              About
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./rules.html" class="navigation__link">
+              Rules
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./registration.html" class="navigation__link">
+              Registration
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./challenges.html" class="navigation__link">
+              challenges
+            </a>
+          </li>
+          <li class="navigation__item navigation__item--home">
+            <!-- <span>01</span>  -->
+            <a href="./index.html" class="navigation__link">
+              <img src="./img/423483-200.png" alt="">
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./scoreboard.html" class="navigation__link">
+              scoreboard
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./help.html" class="navigation__link">
+              FAQs
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./team.html" class="navigation__link">
+              Team
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./sponsors.html" class="navigation__link">
+              Sponsors
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  <!---->
+
+  <section class="sponsor--section" id="sponsors">
+    <div class="sponsor__heading">
+      <br>
+      <h1 class="heading-secondary heading-secondary--white">Our Sponsors</h1>
+    </div>
+
+    <div class="sponsor__container">
+      <h2 class="tier-heading">Associate</h2>
+      <div class="sponsor__row">
+        <a href="https://owasp.org/www-chapter-erode/" target="_blank">
+          <div class="sponsor__card" style="object-fit: contain;height: unset;">
+            <img src="https://owasp.org/www-chapter-erode/assets/images/logo/logo.png"
+              style="width: 50%; padding: 1rem 0;" alt="">
+          </div>
+        </a>
+      </div>
+
+      <h2 class="tier-heading">Community Partner</h2>
+      <div class="sponsor__row">
+        <a href="https://community.mozilla.org/en/groups/mozilla-sivakasi/" target="_blank">
+          <div class="sponsor__card">
+            <img
+              src="https://community.mozilla.org/wp-content/uploads/2020/08/mozSvk_CommunityPortalBanner_1400x605-4.png"
+              alt="">
+          </div>
+        </a>
+      </div>
+
+
+      <h2 class="tier-heading">media partner</h2>
+      <div class="sponsor__row">
+        <a href="https://www.youtube.com/c/ExploitEverything?sub_confirmation=1" target="_blank">
+          <div class="sponsor__card noback">
+            <img
+              src="https://yt3.ggpht.com/ytc/AAUvwnjjcuVIUIAzc4WiXWtuGK_gmb5-c5O7nNaFvK0iTg=s88-c-k-c0x00ffffff-no-rj"
+              alt="">
+          </div>
+        </a>
+        <a href="https://www.youtube.com/channel/UCMOGHzxIqpFG6VjOK_ffA3g" target="_blank">
+          <div class="sponsor__card noback">
+            <img
+              src="https://yt3.ggpht.com/ytc/AAUvwniv6_K0FTkZD0TAO1YrQjsW7HL6FRZKhYGK4vMcHg=s88-c-k-c0x00ffffff-no-rj"
+              alt="">
+          </div>
+        </a>
+
+      </div>
+      <br>
+      <div class="sponsor__row">
+        <a href="https://www.youtube.com/channel/UC4BpyO4AIcynKhBj4PLnvsA" target="_blank">
+          <div class="sponsor__card noback">
+            <img
+              src="https://yt3.ggpht.com/ytc/AAUvwnhWG70kFewF5QtuTWWu6Qe9vE7luKcpVkI2ElOz=s88-c-k-c0x00ffffff-no-rj"
+              alt="">
+          </div>
+        </a>
+        <a href="https://www.youtube.com/channel/UC3rljFNQ4DGgSadh2gpI86g" target="_blank">
+          <div class="sponsor__card noback">
+            <img
+              src="https://yt3.ggpht.com/ytc/AAUvwnholdD6TZGdoBhQSYGIZJJin9r4EfC6DRLbLb__=s88-c-k-c0x00ffffff-no-rj"
+              alt="">
+          </div>
+        </a>
+        <a href="https://www.youtube.com/channel/UCIPGbWiJDYtvqWpSkeSPUDQ" target="_blank">
+          <div class="sponsor__card noback">
+            <img
+              src="https://yt3.ggpht.com/ytc/AAUvwnjaAJbR_1FfCWXLIsaRifmspGkb53BPoMGEO0Od=s88-c-k-c0x00ffffff-no-rj"
+              alt="">
+          </div>
+        </a>
+      </div>
+      <div class="sponsor__heading">
+        <br>
+        <h1 class="heading-secondary heading-secondary--white text-center" style="font-size: 4vw;">SPECIAL THANKS TO<br>TAMIL INFOSEC GUYS<br>(INSTAGRAM,TELEGRAM)</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div id="team"></div>
+    </div>
+
+
+    <!-- <div class="cta-button2">
+      <a class="white" href="" target="_blank">
+        <p>
+          <span class="bg"></span><span class="base"></span>
+          <span class="text">sponsorship brochure</span>
+        </p>
+      </a>
+    </div> -->
+
+  </section>
+  <!---->
+
+</body>
+<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+<script src="./js/home.js"></script>
+<script src="./js/jquery/jquery-3.2.1.min.js"></script>
+
+<script>
+  hamburger = (event) => {
+    if (event)
+      event.preventDefault();
+    document.querySelector('.btn-hamburger').classList.toggle('open');
+    document.querySelector('.menu').classList.toggle('menu--open');
+    document.querySelector('html').classList.toggle('stop-scrolling');
+  }
+  window.onload = function () {
+    hideLoader();
+  }
+
+  function hideLoader() {
+    let preloader = document.querySelector('#loading');
+    x = 0.01;
+    const fadeEffect = setInterval(() => {
+      if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+      }
+      if (preloader.style.opacity >= 0.1) {
+        x *= 2;
+        preloader.style.opacity -= x;
+      } else {
+        preloader.style.opacity = 0;
+        preloader.style.display = 'none';
+        clearInterval(fadeEffect);
+      }
+    }, 50);
+  }
+</script>
+<script>
+  var styles = [
+    'background: Green', 'color: white', 'display: block', 'line-height: 30px', 'text-align: center',
+    'font-weight: bold'
+  ].join(';');
+  var url = "https://www.linkedin.com/in/dnshko/"
+  console.log('%c any help?' + '  ' + url + '', styles);
+</script>
+
+</html>

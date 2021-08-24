@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='dark'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil CTF</title>
+  <link rel="icon" type="image/png"
+    href="https://3cdhsv4crsio1kakza23qz4h-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/PNG_OWASP-AppSec.png" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/util.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3ea20092d3.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body class="u-body" style="overflow: hidden;">
+
+
+  <div id="loading">
+    <div class="preloader">
+      <div class="boxes">
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <img style="size: 100%; position: absolute; z-index: -1; background-size: contain;" src="./img/confettin-bg-2.svg"
+    alt="">
+  <img style="size: 100%; position: absolute; z-index: -1;background-size: contain;" src="./img/confettin-bg-3.svg"
+    alt="">
+
+
+    <div class="nav-respo">
+      <button class="btn btn-hamburger" onclick="hamburger(event)">
+        <span class="line"></span>
+      </button>
+      <div class="menu">
+        <ul>
+          <li class="nav-respo__item">
+            <a href="./index.html" class="nav-respo__link" onclick="return hamburger()">
+              Home
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./about.html" class="nav-respo__link" onclick="return hamburger()">
+              About
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./rules.html" class="nav-respo__link" onclick="return hamburger()">
+              Rules
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./registration.html" class="nav-respo__link" onclick="return hamburger()">
+              Registration
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./challenges.html" class="nav-respo__link" onclick="return hamburger()">
+              Challenges
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./scoreboard.html" class="nav-respo__link" onclick="return hamburger()">
+              scoreboard
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./help.html" class="nav-respo__link" onclick="return hamburger()">
+              FAQs
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./team.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Team
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./sponsors.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Sponsors
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navigation">
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./about.html" class="navigation__link">
+              About
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./rules.html" class="navigation__link">
+              Rules
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./registration.html" class="navigation__link">
+              Registration
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./challenges.html" class="navigation__link">
+              challenges
+            </a>
+          </li>
+          <li class="navigation__item navigation__item--home">
+            <!-- <span>01</span>  -->
+            <a href="./index.html" class="navigation__link">
+              <img src="./img/423483-200.png" alt="">
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./scoreboard.html" class="navigation__link">
+              scoreboard
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./help.html" class="navigation__link">
+              FAQs
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./team.html" class="navigation__link">
+              Team
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./sponsors.html" class="navigation__link">
+              Sponsors
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!---->
+
+  <section class="team--section">
+
+    <div class="team__heading">
+      <h1 class="heading-secondary heading-secondary--white">Our team</h1>
+    </div>
+
+    <div class="team__container">
+      <h3 style="text-align: center;padding: 5%;">Organizers</h3>
+      <br><br>
+      <div class="team__row">
+        <div class="team__card">
+          <div class="team__card-img">
+            <img src="./img/aiden.jpg" alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Monish Kumar
+            </h4>
+            <h6>Infosec Youtuber</h6>
+            <div class="team__card--links">
+              <a href="https://www.youtube.com/channel/UCNLhHfzFhKgZKVgbzeZ0KWQ?sub_confirmation=1"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.youtube.com/channel/UCiTMTFDnGV7jIsnOgyC-3eA?sub_confirmation=1"><i class="fab fa-youtube"></i></a>
+              <a href="https://twitter.com/aidenpearce369"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/aidenmonish/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/AidenPearce369"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team__card">
+          <div class="team__card-img">
+            <img src="./img/Abhinivesh S.jpg" alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Abhinivesh 
+            </h4>
+            <h6>OWASP Erode</h6>
+            <div class="team__card--links">
+              <a href="https://www.youtube.com/channel/UCMOGHzxIqpFG6VjOK_ffA3g?sub_confirmation=1"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.linkedin.com/in/abhinivesh-s-a9b45a1ba/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/Abhinivesh27"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team__card">
+          <div class="team__card-img">
+            <img src="https://image.flaticon.com/icons/png/512/147/147144.png" alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Sachin 
+            </h4>
+            <h6>OWASP Erode</h6>
+            <div class="team__card--links">
+              <a href="https://www.youtube.com/channel/UCMOGHzxIqpFG6VjOK_ffA3g?sub_confirmation=1"><i class="fab fa-youtube"></i></a>
+              <a href="https://in.linkedin.com/in/sachin-selvaraju-0581391ba"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/SachinSIP"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 style="text-align: center;padding: 5%;">Web Team</h3>
+      <br><br>
+      <div class="team__row">
+        <div class="team__card">
+          <div class="team__card-img">
+            <img
+              src="./img/dinesh.jpeg"
+              alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Dinesh</h4>
+            <h6>Full-stack Developer</h6>
+            <div class="team__card--links">
+              <a href="https://www.linkedin.com/in/dnshko/"><i class="fab fa-linkedin"></i></a>
+
+              <a href="https://github.com/dnshko"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 style="text-align: center;padding: 5%;">Challenge Creators</h3>
+      <br><br>
+      <div class="team__row">
+        <div class="team__card">
+          <div class="team__card-img">
+            <img src="./img/ajay.jpg" alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Ajay
+            </h4>
+            <h6>Infosec Youtuber</h6>
+            <div class="team__card--links">
+              <a href="https://www.youtube.com/channel/UC4BpyO4AIcynKhBj4PLnvsA"><i class="fab fa-youtube"></i></a>
+              <a href="https://twitter.com/0xAnnLynn"><i class="fab fa-twitter"></i></a>
+              <a href="https://github.com/TamilHackz"><i class="fab fa-github"></i></a>
+              <a href="https://telegram.me/TamilHackzAdmin"><i class="fab fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team__card">
+          <div class="team__card-img">
+            <img src="./img/jopraveen.jpg" alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Johans Praveen
+            </h4>
+            <h6>Infosec Youtuber</h6>
+            <div class="team__card--links">
+              <a href="https://www.youtube.com/channel/UC3rljFNQ4DGgSadh2gpI86g"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.instagram.com/jopraveen_18/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/jopraveen18"><i class="fab fa-twitter"></i></a>
+              <a href="https://github.com/jopraveen"><i class="fab fa-github"></i></a>
+              <a href="https://jopraveen.wordpress.com/"><i class="fab fa-blogger"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team__card">
+          <div class="team__card-img">
+            <img src="./img/rakesh.jpg" alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Rakesh Kumar
+            </h4>
+            <h6>Infosec Youtuber</h6>
+            <div class="team__card--links">
+              <a href="https://www.youtube.com/channel/UCIPGbWiJDYtvqWpSkeSPUDQ"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.instagram.com/0xrakesh"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.twitter.com/0xcyberhackz"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="team__row">
+        <div class="team__card">
+          <div class="team__card-img">
+            <img src="./img/paul.jpg" alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Paul Jeremiah
+            </h4>
+            <h6></h6>
+            <div class="team__card--links">
+              <a href="https://www.instagram.com/0xcyberpj"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.twitter.com/cyberpj1"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.github.com/0xcyberpj"><i class="fab fa-github"></i></a>
+              <a href="https://telegram.me/cyberpj"><i class="fab fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team__card">
+          <div class="team__card-img">
+            <img src="./img/pavan.jpg" alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Pavan Kalyan
+            </h4>
+            <h6></h6>
+            <div class="team__card--links">
+              <a href="https://twitter.com/0xOv3r_H4uL"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/x0_0rezer0_0x/"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team__card">
+          <div class="team__card-img">
+            <img src="https://cdn.dribbble.com/users/939588/screenshots/7050236/media/66d965ec6b507deb202e8dd7339dd0f6.jpg" alt="">
+          </div>
+          <div class="team__card-details">
+            <h4>Naveen
+            </h4>
+            <h6></h6>
+            <div class="team__card--links">
+              <a href="https://instagram.com/MelvikStorm"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/RabbitFoRed"><i class="fab fa-github"></i></a>
+              <a href="https://theostrich.eu.org"><i class="fab fa-blogger"></i></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+<script>
+  hamburger = (event) => {
+    if (event)
+      event.preventDefault();
+    document.querySelector('.btn-hamburger').classList.toggle('open');
+    document.querySelector('.menu').classList.toggle('menu--open');
+    document.querySelector('html').classList.toggle('stop-scrolling');
+  }
+  window.onload = function () {
+    hideLoader();
+  }
+
+  function hideLoader() {
+    let preloader = document.querySelector('#loading');
+    x = 0.01;
+    const fadeEffect = setInterval(() => {
+      if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+      }
+      if (preloader.style.opacity >= 0.1) {
+        x *= 2;
+        preloader.style.opacity -= x;
+      } else {
+        preloader.style.opacity = 0;
+        preloader.style.display = 'none';
+        clearInterval(fadeEffect);
+      }
+    }, 50);
+  }
+</script>
+<script>
+  var styles = [
+    'background: Green', 'color: white', 'display: block', 'line-height: 30px', 'text-align: center',
+    'font-weight: bold'
+  ].join(';');
+  var url = "https://www.linkedin.com/in/dnshko/"
+  console.log('%c any help?' + '  ' + url + '', styles);
+</script>
+
+</html>

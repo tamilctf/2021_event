@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='dark'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil CTF</title>
+  <link rel="icon" type="image/png"
+    href="https://3cdhsv4crsio1kakza23qz4h-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/PNG_OWASP-AppSec.png" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/util.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3ea20092d3.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body class="u-body" style="overflow: hidden;">
+  <div id="loading">
+    <div class="preloader">
+      <div class="boxes">
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  </section>
+
+  <img style="size: 100%; position: absolute; z-index: -1; background-size: contain;" src="./img/confettin-bg-2.svg"
+    alt="">
+  <img style="size: 100%; position: absolute; z-index: -1;background-size: contain;" src="./img/confettin-bg-3.svg"
+    alt="">
+
+    <div class="nav-respo">
+      <button class="btn btn-hamburger" onclick="hamburger(event)">
+        <span class="line"></span>
+      </button>
+      <div class="menu">
+        <ul>
+          <li class="nav-respo__item">
+            <a href="./index.html" class="nav-respo__link" onclick="return hamburger()">
+              Home
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./about.html" class="nav-respo__link" onclick="return hamburger()">
+              About
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./rules.html" class="nav-respo__link" onclick="return hamburger()">
+              Rules
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./registration.html" class="nav-respo__link" onclick="return hamburger()">
+              Registration
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./challenges.html" class="nav-respo__link" onclick="return hamburger()">
+              Challenges
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./scoreboard.html" class="nav-respo__link" onclick="return hamburger()">
+              scoreboard
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./help.html" class="nav-respo__link" onclick="return hamburger()">
+              FAQs
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./team.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Team
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./sponsors.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Sponsors
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navigation">
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./about.html" class="navigation__link">
+              About
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./rules.html" class="navigation__link">
+              Rules
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./registration.html" class="navigation__link">
+              Registration
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./challenges.html" class="navigation__link">
+              challenges
+            </a>
+          </li>
+          <li class="navigation__item navigation__item--home">
+            <!-- <span>01</span>  -->
+            <a href="./index.html" class="navigation__link">
+              <img src="./img/423483-200.png" alt="">
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./scoreboard.html" class="navigation__link">
+              scoreboard
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./help.html" class="navigation__link">
+              FAQs
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./team.html" class="navigation__link">
+              Team
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./sponsors.html" class="navigation__link">
+              Sponsors
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  <!---->
+
+
+  <section id="about" class="section text-center">
+    <br><br><br>
+    <h1 class="heading-secondary text-center" style="color: white;" >TAMIL CTF 2021</h1>
+    <div class="about__container" style="overflow: hidden;">
+        <br>
+        <div class="container" style="background-color:white;height: auto;padding: 20px;border-radius: 2%;">
+            <div class="row justify-content-center">
+                <div class="col-x-auto">
+                    <img src="./clips/1.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/2.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/3.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/4.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/5.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/6.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/7.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/8.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/9.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/10.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/11.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/12.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/13.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/14.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/15.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/16.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/17.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/18.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/19.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/20.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/21.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/22.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/23.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/24.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/25.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/26.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/27.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/28.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/29.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/30.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/31.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/32.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/33.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/33.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/35.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/36.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/37.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/38.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/39.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/40.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/41.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/42.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/43.png">
+                </div>
+                <div class="col-x-auto">
+                    <img src="./clips/44.png">
+                </div>
+            </div>
+        </div>
+        
+      <div id="statistic" class="statistic-section one-page-section">
+        <div hidden class="container">
+          <div class="row text-center">
+            <div class="col-xs-12 col-md-3">
+              <div class="counter">
+                <i class="fa fa-coffee fa-2x stats-icon"></i>
+                <h2 class="timer count-title count-number" data-count="9000">0</h2>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Coffee Cups</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <div class="counter">
+                <i class="fa fa-code fa-2x stats-icon"></i>
+                <h2 class="timer count-title count-number" data-count="9000">0</h2>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Participants</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <div class="counter">
+                <i class="fa fa-clock-o fa-2x stats-icon"></i>
+                <h2 class="timer count-title count-number" data-count="100">0</h2>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Projects</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <div class="counter">
+                <i class="fa fa-laptop fa-2x stats-icon"></i>
+                <h2 class="timer count-title count-number" data-count="9000">0</h2>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Speakers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+<script src="./js/home.js"></script>
+<script src="./js/jquery/jquery-3.2.1.min.js"></script>
+<script>
+  hamburger = (event) => {
+    if (event)
+      event.preventDefault();
+    document.querySelector('.btn-hamburger').classList.toggle('open');
+    document.querySelector('.menu').classList.toggle('menu--open');
+    document.querySelector('html').classList.toggle('stop-scrolling');
+  }
+  window.onload = function () {
+    hideLoader();
+  }
+
+  function hideLoader() {
+    let preloader = document.querySelector('#loading');
+    x = 0.01;
+    const fadeEffect = setInterval(() => {
+      if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+      }
+      if (preloader.style.opacity >= 0.1) {
+        x *= 2;
+        preloader.style.opacity -= x;
+      } else {
+        preloader.style.opacity = 0;
+        preloader.style.display = 'none';
+        clearInterval(fadeEffect);
+      }
+    }, 50);
+  }
+</script>
+<script>
+  var styles = [
+    'background: Green', 'color: white', 'display: block', 'line-height: 30px', 'text-align: center',
+    'font-weight: bold'
+  ].join(';');
+  var url = "https://www.linkedin.com/in/dnshko/"
+  console.log('%c any help?' + '  ' + url + '', styles);
+</script>
+
+</html>

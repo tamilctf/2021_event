@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='dark'>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBSD4BZVZD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YBSD4BZVZD');
+</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tamil CTF</title>
+	<link rel="icon" type="image/png"
+		href="https://3cdhsv4crsio1kakza23qz4h-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/PNG_OWASP-AppSec.png" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/countdownCss/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/countdownCss/util.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+		rel="stylesheet">
+	<script src="https://kit.fontawesome.com/3ea20092d3.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body>
+	<div id="loading">
+		<div class="preloader">
+			<div class="boxes">
+				<div class="box">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="box">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="box">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="box">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="hero">
+		<div class="container">
+			<div class="hero-inner">
+				<div class="hero-figure anime-element">
+					<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
+						<rect width="528" height="396" style="fill:transparent;" />
+					</svg>
+					<div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
+					<div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
+					<div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
+					<div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
+					<div class="hero-figure-box hero-figure-box-05"></div>
+					<div class="hero-figure-box hero-figure-box-06"></div>
+					<div class="hero-figure-box hero-figure-box-07"></div>
+					<div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
+					<div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
+					<div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<section class="darktheme">
+		<div class="darktheme__container " id="dark__theme">
+			<input class="input__dark" type="checkbox" id="switch" name="theme" />
+			<label class="label__dark" for="switch">Toggle</label>
+		</div>
+
+	</section>
+
+	<div class="nav-respo">
+		<button class="btn btn-hamburger" onclick="hamburger(event)">
+			<span class="line"></span>
+		</button>
+		<div class="menu">
+			<ul>
+				<li class="nav-respo__item">
+					<a href="./index.html" class="nav-respo__link" onclick="return hamburger()">
+						Home
+					</a>
+				</li>
+				<li class="nav-respo__item">
+					<a href="./about.html" class="nav-respo__link" onclick="return hamburger()">
+						About
+					</a>
+				</li>
+				<li class="nav-respo__item">
+					<a href="./rules.html" class="nav-respo__link" onclick="return hamburger()">
+						Rules
+					</a>
+				</li>
+				<li class="nav-respo__item">
+					<a href="./registration.html" class="nav-respo__link" onclick="return hamburger()">
+						Registration
+					</a>
+				</li>
+				<li class="nav-respo__item">
+					<a href="./challenges.html" class="nav-respo__link" onclick="return hamburger()">
+						Challenges
+					</a>
+				</li>
+				<li class="nav-respo__item">
+					<a href="./scoreboard.html" class="nav-respo__link" onclick="return hamburger()">
+						scoreboard
+					</a>
+				</li>
+				<li class="nav-respo__item">
+					<a href="./help.html" class="nav-respo__link" onclick="return hamburger()">
+						FAQs
+					</a>
+				</li>
+				<li class="nav-respo__item">
+					<a href="./team.html" class="nav-respo__link" onclick="return hamburger()">
+						Our Team
+					</a>
+				</li>
+				<li class="nav-respo__item">
+					<a href="./sponsors.html" class="nav-respo__link" onclick="return hamburger()">
+						Our Sponsors
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="navigation">
+		<nav class="navigation__nav">
+			<ul class="navigation__list">
+				<li class="navigation__item">
+					<!-- <span>01</span>  -->
+					<a href="./about.html" class="navigation__link">
+						About
+					</a>
+				</li>
+				<li class="navigation__item">
+					<!-- <span>01</span>  -->
+					<a href="./rules.html" class="navigation__link">
+						Rules
+					</a>
+				</li>
+				<li class="navigation__item">
+					<!-- <span>01</span>  -->
+					<a href="./registration.html" class="navigation__link">
+						Registration
+					</a>
+				</li>
+				<li class="navigation__item">
+					<!-- <span>01</span>  -->
+					<a href="./challenges.html" class="navigation__link">
+						challenges
+					</a>
+				</li>
+				<li class="navigation__item navigation__item--home">
+					<!-- <span>01</span>  -->
+					<a href="./index.html" class="navigation__link">
+						<img src="./img/423483-200.png" alt="">
+					</a>
+				</li>
+				<li class="navigation__item">
+					<!-- <span>01</span>  -->
+					<a href="./scoreboard.html" class="navigation__link">
+						scoreboard
+					</a>
+				</li>
+				<li class="navigation__item">
+					<!-- <span>01</span>  -->
+					<a href="./help.html" class="navigation__link">
+						FAQs
+					</a>
+				</li>
+				<li class="navigation__item">
+					<!-- <span>01</span>  -->
+					<a href="./team.html" class="navigation__link">
+						Team
+					</a>
+				</li>
+				<li class="navigation__item">
+					<!-- <span>01</span>  -->
+					<a href="./sponsors.html" class="navigation__link">
+						Sponsors
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!---->
+	<header id="home" class="home-section">
+		<div class="home__container">
+			<img src="./img/logo.png"
+				width="100%" alt="Tamil CTF" style="opacity: 0.5;">
+			<div class="home__container--text">
+				<h1>TAMIL CTF</h1>
+				<p>
+					&#128468; 22 May - 23 May 2021</p>
+			</div>
+			<!-- &#128197 &#128467; -->
+
+			<div class="home__button">
+				<a class="cta-button-hero" style=" height: 44px; 
+							width: 230px;
+							overflow: hidden;font-size:medium;font-weight: 800;" href="./review.html">
+							<i class="fas fa-heart" style="margin-right: 5px;"></i>Moments
+				</a>
+				<a href="https://discord.gg/u9Fbm3J" class="cta-button-hero" style=" height: 44px; 
+				width: 230px;
+				overflow: hidden;font-size:medium;font-weight: 800;"><img src="/img/discord.png"></a>
+			</div>
+		</div>
+		<br>
+		<div class="home_container center">
+			<a class="cta-button-hero" style=" height: 44px; 
+							width: 230px;
+							overflow: hidden;font-size:medium;font-weight: 800;" href="./writeups.html">
+							<i class="fas fa-book" style="margin-right: 5px;"></i>Writeups
+				</a>
+		</div>
+
+		<div class="home__scroll">
+			<!-- <i class="fas fa-chevron-down"></i> -->
+
+		</div>
+	</header>
+
+	<!-- 
+	<footer class="new_footer_area bg_color" id="follow">
+		<div class="new_footer_top">
+			<div class="container footer__container">
+
+				<div class="footer__row footer__row--1">
+					<div class="footer__row--img">
+					</div>
+					<div class="footer__row--text">
+						<h1>Tamil CTF</h1>
+					</div>
+				</div>
+
+				<div class="row footer__row">
+					<div class="col-lg-3 col-md-6">
+						<div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+							style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+							<h3 class="f-title f_600 t_color f_size_18">Follow Us!</h3>
+							<div class="f_social_icon">
+								<a href="https://www.facebook.com/"
+									class="fab fa-facebook"></a>
+								<a href="https://twitter.com/" class="fab fa-twitter"></a>
+								<a href="#" class="fab fa-linkedin"></a>
+								<a href="mailto:" class="fab fa-envelope"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bg">
+				<div class="footer_bg_one"></div>
+				<div class="footer_bg_two"></div>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-sm-7">
+						<p class="mb-0 f_400">© Tamil CTF 2021 All rights reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+ -->
+
+	<!-- <script src=".js/anime.min.js"></script> -->
+	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+	<script src="./js/home.js"></script>
+	<script src="./js/jquery/jquery-3.2.1.min.js"></script>
+	<script>
+		var styles = [
+			'background: Green', 'color: white', 'display: block', 'line-height: 30px', 'text-align: center',
+			'font-weight: bold'
+		].join(';');
+		var url = "https://www.linkedin.com/in/dnshko/"
+		console.log('%c any help?' + '  ' + url + '', styles);
+	</script>
+	<!-- <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;left:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/2021/events?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=blue" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-blue.svg" alt="Major League Hacking 2021 Hackathon Season" style="width:100%"></a> -->
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='dark'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil CTF</title>
+  <link rel="icon" type="image/png"
+    href="https://3cdhsv4crsio1kakza23qz4h-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/PNG_OWASP-AppSec.png" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/util.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3ea20092d3.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body class="u-body" style="overflow: hidden;">
+
+
+  <div id="loading">
+    <div class="preloader">
+      <div class="boxes">
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="darktheme">
+    <div class="darktheme__container " id="dark__theme">
+      <input class="input__dark" type="checkbox" id="switch" name="theme" />
+      <label class="label__dark" for="switch">Toggle</label>
+    </div>
+
+  </section>
+
+  <img style="size: 100%;width: 95%; position: absolute; z-index: -1; background-size: contain;" src="./img/World Map.svg"
+    alt="">
+  <!-- <img style="size: 100%; position: absolute; z-index: -1;background-size: contain;" src="./img/confettin-bg-3.svg"
+    alt=""> -->
+
+
+    <div class="nav-respo">
+      <button class="btn btn-hamburger" onclick="hamburger(event)">
+        <span class="line"></span>
+      </button>
+      <div class="menu">
+        <ul>
+          <li class="nav-respo__item">
+            <a href="./index.html" class="nav-respo__link" onclick="return hamburger()">
+              Home
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./about.html" class="nav-respo__link" onclick="return hamburger()">
+              About
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./rules.html" class="nav-respo__link" onclick="return hamburger()">
+              Rules
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./registration.html" class="nav-respo__link" onclick="return hamburger()">
+              Registration
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./challenges.html" class="nav-respo__link" onclick="return hamburger()">
+              Challenges
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./scoreboard.html" class="nav-respo__link" onclick="return hamburger()">
+              scoreboard
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./help.html" class="nav-respo__link" onclick="return hamburger()">
+              FAQs
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./team.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Team
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./sponsors.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Sponsors
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navigation">
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./about.html" class="navigation__link">
+              About
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./rules.html" class="navigation__link">
+              Rules
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./registration.html" class="navigation__link">
+              Registration
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./challenges.html" class="navigation__link">
+              challenges
+            </a>
+          </li>
+          <li class="navigation__item navigation__item--home">
+            <!-- <span>01</span>  -->
+            <a href="./index.html" class="navigation__link">
+              <img src="./img/423483-200.png" alt="">
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./scoreboard.html" class="navigation__link">
+              scoreboard
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./help.html" class="navigation__link">
+              FAQs
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./team.html" class="navigation__link">
+              Team
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./sponsors.html" class="navigation__link">
+              Sponsors
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  <!---->
+
+
+
+  <section id="prizes" class="prize--section">
+
+    <h1 class="heading-secondary heading-secondary--white">Registration</h1>
+
+    <div class="prize__container">
+      <div class="container">
+        <div class="card">
+          <div class="card-head">
+            <!-- <img src="https://s5.postimg.cc/wy79025cz/nike_Logo_White.png" alt="logo" class="card-logo"> -->
+            <img src="./img/user red.png" alt="Shoe" class="product-img">
+            <div class="product-detail">
+              <h2>Tamil</h2>
+            </div>
+            <span class="back-text">
+                    CTF
+                  </span>
+          </div>
+          <div class="card-body">
+            <div class="product-desc">
+              <span class="product-title">
+                      <b>participate</b>
+                      <span class="badge">
+                        New
+                      </span>
+              </span>
+              <span class="product-price">
+                <a href="https://forms.gle/1rpGA2xRBqRpVZMp8" style="color:white;text-decoration-style:dotted;" target="_blank"><b >Register Now</b></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-head">
+            <!-- <img src="https://s5.postimg.cc/wy79025cz/nike_Logo_White.png" alt="logo" class="card-logo"> -->
+            <img src="./img/user blue.png" alt="Shoe" class="product-img" style="    margin-left: -50px;">
+            <div class="product-detail">
+              <h2>Tamil</h2>
+            </div>
+            <span class="back-text">
+                    CTF
+                  </span>
+          </div>
+          <div class="card-body">
+            <div class="product-desc">
+              <span class="product-title">
+                      <b>Contribute</b>
+                      <span class="badge">
+                        New
+                      </span>
+              </span>
+
+                    <span class="product-price">
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdBFNBdAeK1c_cPnNyWGNWhbF7ZdEx8Qk8qQQDvtjJgDYk7CQ/viewform" style="color:white;text-decoration-style:dotted;" target="_blank"><b>Register Now</b></a>
+                    </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+    </div>
+    <!-- <div class="prize__container">
+        <div class="flip">
+            <div class="front">
+                <h1><img src="/img/sponsor/echoAR - Logo.webp"></h1>
+                <h1 class="teda_hai" style="font-size: 1.3rem; line-height: 1;">
+                    challenge
+                </h1>
+            </div>
+
+            <div class="back">
+                <h1><img src="/img/sponsor/echoAR - Logo.webp"></h1>
+                <br>
+                <p>• Application built using echoAR platform<br>
+                    • <span>$50 </span> Amazon gift card<br>
+
+                    • Three-month free Buiness
+                    Tier access<br>
+                    • Selected projects will be feature in echoAR’s
+                    inspiration page.
+                </p>
+            </div>
+        </div> -->
+    <br>
+    <br>
+  </section>
+
+
+  <!---->
+</body>
+<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+<script src="./js/home.js"></script>
+<script src="./js/jquery/jquery-3.2.1.min.js"></script>
+
+<script>
+  hamburger = (event) => {
+    if (event)
+      event.preventDefault();
+    document.querySelector('.btn-hamburger').classList.toggle('open');
+    document.querySelector('.menu').classList.toggle('menu--open');
+    document.querySelector('html').classList.toggle('stop-scrolling');
+  }
+  window.onload = function () {
+    hideLoader();
+  }
+
+  function hideLoader() {
+    let preloader = document.querySelector('#loading');
+    x = 0.01;
+    const fadeEffect = setInterval(() => {
+      if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+      }
+      if (preloader.style.opacity >= 0.1) {
+        x *= 2;
+        preloader.style.opacity -= x;
+      } else {
+        preloader.style.opacity = 0;
+        preloader.style.display = 'none';
+        clearInterval(fadeEffect);
+      }
+    }, 50);
+  }
+</script>
+<script>
+  var styles = [
+  'background: Green'
+  , 'color: white'
+  , 'display: block'
+  , 'line-height: 30px'
+  , 'text-align: center'
+  , 'font-weight: bold'
+].join(';');
+var url="https://www.linkedin.com/in/dnshko/"
+console.log('%c any help?'+'  '+url+'', styles);
+</script>
+</html>

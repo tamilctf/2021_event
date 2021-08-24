@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='dark'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil CTF</title>
+  <link rel="icon" type="image/png"
+    href="https://3cdhsv4crsio1kakza23qz4h-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/PNG_OWASP-AppSec.png" />
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/countdownCss/util.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3ea20092d3.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <link rel="stylesheet/less" type="text/css" href="./css/lessstyles.less" />
+</head>
+
+<body class="u-body" style="overflow: hidden;">
+    <script>
+        /**
+ * Created by Kupletsky Sergey on 05.11.14.
+ *
+ * Material Design Responsive Table
+ * Tested on Win8.1 with browsers: Chrome 37, Firefox 32, Opera 25, IE 11, Safari 5.1.7
+ * You can use this table in Bootstrap (v3) projects. Material Design Responsive Table CSS-style will override basic bootstrap style.
+ * JS used only for table constructor: you don't need it in your project
+ */
+
+$(document).ready(function() {
+
+var table = $('#table');
+
+// Table bordered
+$('#table-bordered').change(function() {
+    var value = $( this ).val();
+    table.removeClass('table-bordered').addClass(value);
+});
+
+// Table striped
+$('#table-striped').change(function() {
+    var value = $( this ).val();
+    table.removeClass('table-striped').addClass(value);
+});
+
+// Table hover
+$('#table-hover').change(function() {
+    var value = $( this ).val();
+    table.removeClass('table-hover').addClass(value);
+});
+
+// Table color
+$('#table-color').change(function() {
+    var value = $(this).val();
+    table.removeClass(/^table-mc-/).addClass(value);
+});
+});
+
+// jQuery’s hasClass and removeClass on steroids
+// by Nikita Vasilyev
+// https://github.com/NV/jquery-regexp-classes
+(function(removeClass) {
+
+jQuery.fn.removeClass = function( value ) {
+    if ( value && typeof value.test === "function" ) {
+        for ( var i = 0, l = this.length; i < l; i++ ) {
+            var elem = this[i];
+            if ( elem.nodeType === 1 && elem.className ) {
+                var classNames = elem.className.split( /\s+/ );
+
+                for ( var n = classNames.length; n--; ) {
+                    if ( value.test(classNames[n]) ) {
+                        classNames.splice(n, 1);
+                    }
+                }
+                elem.className = jQuery.trim( classNames.join(" ") );
+            }
+        }
+    } else {
+        removeClass.call(this, value);
+    }
+    return this;
+}
+
+})(jQuery.fn.removeClass);
+    </script>
+
+  <div id="loading">
+    <div class="preloader">
+      <div class="boxes">
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <img style="size: 100%; position: absolute; z-index: -1; background-size: contain;" src="./img/confettin-bg-2.svg"
+    alt="">
+  <img style="size: 100%; position: absolute; z-index: -1;background-size: contain;" src="./img/confettin-bg-3.svg"
+    alt="">
+
+
+    <div class="nav-respo">
+      <button class="btn btn-hamburger" onclick="hamburger(event)">
+        <span class="line"></span>
+      </button>
+      <div class="menu">
+        <ul>
+          <li class="nav-respo__item">
+            <a href="./index.html" class="nav-respo__link" onclick="return hamburger()">
+              Home
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./about.html" class="nav-respo__link" onclick="return hamburger()">
+              About
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./rules.html" class="nav-respo__link" onclick="return hamburger()">
+              Rules
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./registration.html" class="nav-respo__link" onclick="return hamburger()">
+              Registration
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./challenges.html" class="nav-respo__link" onclick="return hamburger()">
+              Challenges
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./scoreboard.html" class="nav-respo__link" onclick="return hamburger()">
+              scoreboard
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./help.html" class="nav-respo__link" onclick="return hamburger()">
+              FAQs
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./team.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Team
+            </a>
+          </li>
+          <li class="nav-respo__item">
+            <a href="./sponsors.html" class="nav-respo__link" onclick="return hamburger()">
+              Our Sponsors
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navigation">
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./about.html" class="navigation__link">
+              About
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./rules.html" class="navigation__link">
+              Rules
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./registration.html" class="navigation__link">
+              Registration
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./challenges.html" class="navigation__link">
+              challenges
+            </a>
+          </li>
+          <li class="navigation__item navigation__item--home">
+            <!-- <span>01</span>  -->
+            <a href="./index.html" class="navigation__link">
+              <img src="./img/423483-200.png" alt="">
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./scoreboard.html" class="navigation__link">
+              scoreboard
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./help.html" class="navigation__link">
+              FAQs
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./team.html" class="navigation__link">
+              Team
+            </a>
+          </li>
+          <li class="navigation__item">
+            <!-- <span>01</span>  -->
+            <a href="./sponsors.html" class="navigation__link">
+              Sponsors
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!---->
+
+
+  <section class="team--section">
+
+    <div class="team__heading">
+      <h1 class="heading-secondary heading-secondary--white">TamilCTF 2021 Wrietups/PoC</h1>
+    </div>
+
+    <div id="demo" style="background-color: white;color: black;padding: 2vw;border-radius: 20px;">
+        <!-- Responsive table starts here -->
+        <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+        <div class="table-responsive-vertical shadow-z-1">
+        <!-- Table starts here -->
+        <style>
+            a{color: black;}
+        </style>
+        <table id="table" class="table table-hover table-mc-light-blue">
+            <thead>
+              <tr>
+                <th>Challenge</th>
+                <th>Category</th>
+                <th>Author</th>
+                <th>Difficulty</th>
+                <th>Wrietup/PoC</th>
+                <th>Submitted</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title="Challenge">Catch The Flag</td>
+                <td data-title="Category">Pwn</td>
+                <td data-title="Name">Ajay</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Flappy Bird</td>
+                <td data-title="Category">Pwn</td>
+                <td data-title="Name">Ajay</td>
+                <td data-title="Link">Medium</td>
+                <td data-title="Status"><a href="" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">2Anything</td>
+                <td data-title="Category">Pwn</td>
+                <td data-title="Name">Ajay</td>
+                <td data-title="Link">Hard</td>
+                <td data-title="Status"><a href="" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Its Maths</td>
+                <td data-title="Category">Reversing</td>
+                <td data-title="Name">Johans Praveen</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/tamilctf/exploiteverythingtamil.github.io/raw/main/TamilCTF2021-Writeups/Joptaveen_writeups/REVERSING%7BItsMaths%7D.pdf" download>PDF</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">RevEng</td>
+                <td data-title="Category">Reversing</td>
+                <td data-title="Name">Rakesh Kumar</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/Cyber-Hackz/tamilctf2021-writeups/tree/main/RevEng" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Encode</td>
+                <td data-title="Category">Reversing</td>
+                <td data-title="Name">Rakesh Kumar</td>
+                <td data-title="Link">Medium</td>
+                <td data-title="Status"><a href="https://github.com/Cyber-Hackz/tamilctf2021-writeups/tree/main/Encode" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Overflow Me</td>
+                <td data-title="Category">Reversing</td>
+                <td data-title="Name">Rakesh Kumar</td>
+                <td data-title="Link">Medium</td>
+                <td data-title="Status"><a href="https://github.com/Cyber-Hackz/tamilctf2021-writeups/tree/main/Overflow%20Me" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Try Flutter Me</td>
+                <td data-title="Category">Reversing</td>
+                <td data-title="Name">Abhinivesh</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://www.youtube.com/watch?v=O5SbUUqrsU8" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Akka University</td>
+                <td data-title="Category">Web</td>
+                <td data-title="Name">Johans Praveen</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/tamilctf/exploiteverythingtamil.github.io/raw/main/TamilCTF2021-Writeups/Joptaveen_writeups/WEB%7BAkka_university%7D.pdf" download>PDF</a></td>
+                
+            </tr>
+              <tr>
+                <td data-title="Challenge">CringeJS</td>
+                <td data-title="Category">Web</td>
+                <td data-title="Name">Johans Praveen</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/tamilctf/exploiteverythingtamil.github.io/raw/main/TamilCTF2021-Writeups/Joptaveen_writeups/WEB%7BCringeJS%7D.pdf" download>PDF</a></td>
+                <td data-title="Submitted"><a href="https://github.com/exploiteverythingtamil/exploiteverythingtamil.github.io/raw/main/Submitted/CringeJS_Walkthrough.pdf" download>PDF</a></td>
+                
+            </tr>
+              <tr>
+                <td data-title="Challenge">NotAPinterest</td>
+                <td data-title="Category">Web</td>
+                <td data-title="Name">Paul Jeremiah</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/exploiteverythingtamil/TamilCTF2021/raw/main/tamilctf2021_paul/notapinterest.pdf" download>PDF</a></td>
+                <td data-title="Submitted"><a href="https://github.com/exploiteverythingtamil/exploiteverythingtamil.github.io/raw/main/Submitted/NotAPinterest%20walkthrough.pdf" download>PDF</a></td>
+            </tr>
+              <tr>
+                <td data-title="Challenge">Delivery Boy</td>
+                <td data-title="Category">Web</td>
+                <td data-title="Name">Johans Praveen</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/tamilctf/exploiteverythingtamil.github.io/raw/main/TamilCTF2021-Writeups/Joptaveen_writeups/WEB%7BDELIVERY_BOY%7D.pdf" download>PDF</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Welcome Gem</td>
+                <td data-title="Category">Web</td>
+                <td data-title="Name">Naveen</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/exploiteverythingtamil/TamilCTF2021/main/WelcomGem-64.pdf" download>PDF</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Choco Cookies</td>
+                <td data-title="Category">Web</td>
+                <td data-title="Name">Naveen</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/tamilctf/exploiteverythingtamil.github.io/raw/main/TamilCTF2021-Writeups/Choco_Cookies%20Walkthrough.pdf" download="">PDF</a></td>
+                <td data-title="Status"><a href="https://github.com/exploiteverythingtamil/exploiteverythingtamil.github.io/raw/main/Submitted/Choco_Cookies%20Walkthrough.pdf" download="">PDF</a></td>
+
+            </tr>
+              <tr>
+                <td data-title="Challenge">Cure Me</td>
+                <td data-title="Category">Web</td>
+                <td data-title="Name">Johans Praveen</td>
+                <td data-title="Link">Medium</td>
+                <td data-title="Status"><a href="https://github.com/tamilctf/exploiteverythingtamil.github.io/raw/main/TamilCTF2021-Writeups/Joptaveen_writeups/WEB%7BCURE_ME%7D.pdf" download>PDF</a></td>
+                <td data-title="Submitted"><a href="https://github.com/exploiteverythingtamil/exploiteverythingtamil.github.io/raw/main/Submitted/Cure%20ME%20Walkthrough.pdf" download>PDF</a></td>
+            </tr>
+              <tr>
+                <td data-title="Challenge">GitHub</td>
+                <td data-title="Category">Forensics</td>
+                <td data-title="Name">Paul Jeremiah</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/exploiteverythingtamil/TamilCTF2021/raw/main/tamilctf2021_paul/GITHUB.pdf.pdf" download>PDF</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Corrupt Pannitaanga Karna</td>
+                <td data-title="Category">Forensics</td>
+                <td data-title="Name">Sachin</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">GoodBook</td>
+                <td data-title="Category">Forensics</td>
+                <td data-title="Name">Paul Jeremiah</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/exploiteverythingtamil/TamilCTF2021/raw/main/tamilctf2021_paul/good_book.pdf" download="">PDF</a></td>
+                <td data-title="Submitted"><a href="https://github.com/exploiteverythingtamil/exploiteverythingtamil.github.io/raw/main/Submitted/GoodBook%20Walkthrough.pdf" download>PDF</a></td>
+            </tr>
+              <tr>
+                <td data-title="Challenge">Vellai Eluthu</td>
+                <td data-title="Category">Forensics</td>
+                <td data-title="Name">Paul Jeremiah</td>
+                <td data-title="Link">Medium</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/exploiteverythingtamil/TamilCTF2021/main/vellai_eluthu_paul.pdf" download>PDF</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">A_PCAP_Packet</td>
+                <td data-title="Category">Forensics</td>
+                <td data-title="Name">Paul Jeremiah</td>
+                <td data-title="Link">Medium</td>
+                <td data-title="Status"><a href="https://github.com/exploiteverythingtamil/TamilCTF2021/raw/main/tamilctf2021_paul/pcap_writeup_pj.pdf" download>PDF</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">FCAT</td>
+                <td data-title="Category">Forensics</td>
+                <td data-title="Name">Pavan Kalyan</td>
+                <td data-title="Link">Hard</td>
+                <td data-title="Status"><a href="https://youtu.be/9iJQkDg8U04" target="_blank">Text</a></td>
+                <td data-title="Submited"><a href="https://www.youtube.com/watch?v=Fp8oH7OFbiM" download>Video</a></td>
+            </tr>
+              <tr>
+                <td data-title="Challenge">Boss Image</td>
+                <td data-title="Category">Crypto</td>
+                <td data-title="Name">Paul Jeremiah</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/exploiteverythingtamil/TamilCTF2021/raw/main/tamilctf2021_paul/CHALLENGE%20Base%20The%20Boss.pdf" download>PDF</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">FracMore</td>
+                <td data-title="Category">Crypto</td>
+                <td data-title="Name">Pavan Kalyan</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/exploiteverythingtamil/TamilCTF2021/main/Pavan/Cryptography%20Writeups/Chall1%20FracMore.txt" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Galaxy</td>
+                <td data-title="Category">Crypto</td>
+                <td data-title="Name">Pavan Kalyan</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/exploiteverythingtamil/TamilCTF2021/main/Pavan/Cryptography%20Writeups/Chall2%20Galaxyy.txt" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">RaaamSaAran</td>
+                <td data-title="Category">Crypto</td>
+                <td data-title="Name">Pavan Kalyan</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/exploiteverythingtamil/TamilCTF2021/main/Pavan/Cryptography%20Writeups/Chall5%20RaaamSaaaraAn.txt" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Zippy</td>
+                <td data-title="Category">Crypto</td>
+                <td data-title="Name">Monish Kumar</td>
+                <td data-title="Link">Medium</td>
+                <td data-title="Status"><a href="https://youtu.be/snkyaRISW4A" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">DeSpacitoo</td>
+                <td data-title="Category">Crypto</td>
+                <td data-title="Name">Pavan Kalyan</td>
+                <td data-title="Link">Medium</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/exploiteverythingtamil/TamilCTF2021/main/Pavan/Cryptography%20Writeups/Chall4%20DESpacitoo.txt" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">FlamA35</td>
+                <td data-title="Category">Crypto</td>
+                <td data-title="Name">Pavan Kalyan</td>
+                <td data-title="Link">Hard</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/exploiteverythingtamil/TamilCTF2021/main/Pavan/Cryptography%20Writeups/Chall3%20FlamA35.txt" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">0bsession</td>
+                <td data-title="Category">Stegno</td>
+                <td data-title="Name">Pavan Kalyan</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/exploiteverythingtamil/TamilCTF2021/main/Pavan/Forensics%20and%20Stego%20Writeups/Chall2%200bsession.txt" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">2E</td>
+                <td data-title="Category">Stegno</td>
+                <td data-title="Name">Johans Praveen</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/tamilctf/exploiteverythingtamil.github.io/main/TamilCTF2021-Writeups/Joptaveen_writeups/STEGNO%7B2E%7D.pdf" download>PDF</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Stegnanba</td>
+                <td data-title="Category">Stegno</td>
+                <td data-title="Name">Paul Jeremiah</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://github.com/exploiteverythingtamil/exploiteverythingtamil.github.io/raw/main/Submitted/Stegnanba_writeup.pdf" download>PDF</a></td>
+                <td data-title="Submited"><a href="https://github.com/exploiteverythingtamil/exploiteverythingtamil.github.io/raw/main/Submitted/Stegnanba_writeup.pdf" download="">PDF</a></td>
+            </tr>
+              <tr>
+                <td data-title="Challenge">UFO Signal</td>
+                <td data-title="Category">Stegno</td>
+                <td data-title="Name">Monish Kumar</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://youtu.be/mxYGny3oFw4" target="_blank">Video</a></td>
+                <td data-title="Status"><a href="https://github.com/exploiteverythingtamil/exploiteverythingtamil.github.io/raw/main/Submitted/UFO%20Signal%20Walkthrough.pdf" download>PDF</a></td>
+                
+            </tr>
+              <tr>
+                <td data-title="Challenge">Stefano</td>
+                <td data-title="Category">Stegno</td>
+                <td data-title="Name">Pavan Kalyan</td>
+                <td data-title="Link">Hard</td>
+                <td data-title="Status"><a href="https://raw.githubusercontent.com/exploiteverythingtamil/TamilCTF2021/main/Pavan/Forensics%20and%20Stego%20Writeups/Chall3%20Stefano.txt" target="_blank">Text</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Vanakkam Nanba</td>
+                <td data-title="Category">OSINT</td>
+                <td data-title="Name">Sachin</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Who is this?</td>
+                <td data-title="Category">OSINT</td>
+                <td data-title="Name">Sachin</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">A Marvellous Monument</td>
+                <td data-title="Category">OSINT</td>
+                <td data-title="Name">Sachin</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Photographer ah nanu?</td>
+                <td data-title="Category">OSINT</td>
+                <td data-title="Name">Sachin</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="" target="_blank">Video</a></td>
+              </tr>
+              <tr>
+                <td data-title="Challenge">Hunt Down</td>
+                <td data-title="Category">OSINT</td>
+                <td data-title="Name">Paul Jeremiah</td>
+                <td data-title="Link">Easy</td>
+                <td data-title="Status"><a href="https://www.youtube.com/watch?v=EOpt_iTu2l8&t=1s" target="_blank">Video</a></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>    
+  </section>
+  <br><br>    
+
+</body>
+<script>
+  hamburger = (event) => {
+    if (event)
+      event.preventDefault();
+    document.querySelector('.btn-hamburger').classList.toggle('open');
+    document.querySelector('.menu').classList.toggle('menu--open');
+    document.querySelector('html').classList.toggle('stop-scrolling');
+  }
+  window.onload = function () {
+    hideLoader();
+  }
+
+  function hideLoader() {
+    let preloader = document.querySelector('#loading');
+    x = 0.01;
+    const fadeEffect = setInterval(() => {
+      if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+      }
+      if (preloader.style.opacity >= 0.1) {
+        x *= 2;
+        preloader.style.opacity -= x;
+      } else {
+        preloader.style.opacity = 0;
+        preloader.style.display = 'none';
+        clearInterval(fadeEffect);
+      }
+    }, 50);
+  }
+</script>
+<script>
+  var styles = [
+    'background: Green', 'color: white', 'display: block', 'line-height: 30px', 'text-align: center',
+    'font-weight: bold'
+  ].join(';');
+  var url = "https://www.linkedin.com/in/dnshko/"
+  console.log('%c any help?' + '  ' + url + '', styles);
+</script>
+
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='dark'>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tamil CTF</title>
+	<link rel="icon" type="image/png"
+		href="https://3cdhsv4crsio1kakza23qz4h-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/PNG_OWASP-AppSec.png" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="./css/style.css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/countdownCss/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/cards.css">
+	<link rel="stylesheet" type="text/css" href="./css/countdownCss/util.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+		rel="stylesheet">
+	<script src="https://kit.fontawesome.com/3ea20092d3.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body class="u-body" style="overflow: hidden;">
+
+
+	<div id="loading">
+		<div class="preloader">
+			<div class="boxes">
+				<div class="box">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="box">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="box">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="box">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<img style="size: 100%; position: absolute; z-index: -1; background-size: contain;" src="./img/confettin-bg-2.svg"
+		alt="">
+	<img style="size: 100%; position: absolute; z-index: -1;background-size: contain;" src="./img/confettin-bg-3.svg"
+		alt="">
+    <div class="nav-respo">
+		<button class="btn btn-hamburger" onclick="hamburger(event)">
+		  <span class="line"></span>
+		</button>
+		<div class="menu">
+		  <ul>
+			<li class="nav-respo__item">
+			  <a href="./index.html" class="nav-respo__link" onclick="return hamburger()">
+				Home
+			  </a>
+			</li>
+			<li class="nav-respo__item">
+			  <a href="./about.html" class="nav-respo__link" onclick="return hamburger()">
+				About
+			  </a>
+			</li>
+			<li class="nav-respo__item">
+			  <a href="./rules.html" class="nav-respo__link" onclick="return hamburger()">
+				Rules
+			  </a>
+			</li>
+			<li class="nav-respo__item">
+			  <a href="./registration.html" class="nav-respo__link" onclick="return hamburger()">
+				Registration
+			  </a>
+			</li>
+			<li class="nav-respo__item">
+			  <a href="./challenges.html" class="nav-respo__link" onclick="return hamburger()">
+				Challenges
+			  </a>
+			</li>
+			<li class="nav-respo__item">
+			  <a href="./scoreboard.html" class="nav-respo__link" onclick="return hamburger()">
+				scoreboard
+			  </a>
+			</li>
+			<li class="nav-respo__item">
+			  <a href="./help.html" class="nav-respo__link" onclick="return hamburger()">
+				FAQs
+			  </a>
+			</li>
+			<li class="nav-respo__item">
+			  <a href="./team.html" class="nav-respo__link" onclick="return hamburger()">
+				Our Team
+			  </a>
+			</li>
+			<li class="nav-respo__item">
+			  <a href="./sponsors.html" class="nav-respo__link" onclick="return hamburger()">
+				Our Sponsors
+			  </a>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	  <div class="navigation">
+		<nav class="navigation__nav">
+		  <ul class="navigation__list">
+			<li class="navigation__item">
+			  <!-- <span>01</span>  -->
+			  <a href="./about.html" class="navigation__link">
+				About
+			  </a>
+			</li>
+			<li class="navigation__item">
+			  <!-- <span>01</span>  -->
+			  <a href="./rules.html" class="navigation__link">
+				Rules
+			  </a>
+			</li>
+			<li class="navigation__item">
+			  <!-- <span>01</span>  -->
+			  <a href="./registration.html" class="navigation__link">
+				Registration
+			  </a>
+			</li>
+			<li class="navigation__item">
+			  <!-- <span>01</span>  -->
+			  <a href="./challenges.html" class="navigation__link">
+				challenges
+			  </a>
+			</li>
+			<li class="navigation__item navigation__item--home">
+			  <!-- <span>01</span>  -->
+			  <a href="./index.html" class="navigation__link">
+				<img src="./img/423483-200.png" alt="">
+			  </a>
+			</li>
+			<li class="navigation__item">
+			  <!-- <span>01</span>  -->
+			  <a href="./scoreboard.html" class="navigation__link">
+				scoreboard
+			  </a>
+			</li>
+			<li class="navigation__item">
+			  <!-- <span>01</span>  -->
+			  <a href="./help.html" class="navigation__link">
+				FAQs
+			  </a>
+			</li>
+			<li class="navigation__item">
+			  <!-- <span>01</span>  -->
+			  <a href="./team.html" class="navigation__link">
+				Team
+			  </a>
+			</li>
+			<li class="navigation__item">
+			  <!-- <span>01</span>  -->
+			  <a href="./sponsors.html" class="navigation__link">
+				Sponsors
+			  </a>
+			</li>
+		  </ul>
+		</nav>
+	  </div>
+	<!---->
+
+	<main>
+		<section id="theme" class="theme--section">
+			<br><br><br>
+			<h1 class="heading-secondary heading-secondary--white">CHALLENGES
+			</h1>
+			<br>
+			<br><br>
+            <div class="container-fluid text-center">
+                <h1>PWN</h1>
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Catch The Flag</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Jump somewhere</h4>
+                        <code>nc 143.110.187.196 1585</code>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/PWN/catchtheflag" download>>>catchtheflag</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Flappy Bird</h2>
+                        <h6>(75 Points)</h6>
+                        <h4>Birds fall into nests</h4>
+                        <code>nc 143.110.187.196 1565</code>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/PWN/flappy-bird" download>>>flappybird</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>2Anything</h2>
+                        <h6>(100 Points)</h6>
+                        <h4>Snail : I lost my home can you help me to get my shell back</h4>
+                        <code>nc 143.110.246.109 1580</code>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/PWN/anything" download>>>2anything</a>
+                      </div>
+                    </div>
+                </div>
+                <br><br>
+                <h1>REVERSING</h1>
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>ItsMaths</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Solve maths problems and make a call CAPSLOCK</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/REVERSING/ItsMaths.zip" download>>>itsmaths</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>RevEng</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Same Numbers Give 0</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/REVERSING/RevEng" download>>>reveng</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Encode</h2>
+                        <h6>(75 Points)</h6>
+                        <h4>All the string are encoded, just try some math calculation on it.</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/REVERSING/encode" download>>>encoded</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Overflow Me</h2>
+                        <h6>(75 Points)</h6>
+                        <h4>I forgot my return path,can you show me the way</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/REVERSING/overflow_me" download>>>overflowme</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <span></span>
+                        <div class="content">
+                          <h2>TryFlutterMe</h2>
+                          <h6>(50 Points)</h6>
+                          <h4>Mr.Abh is a hacker,he codes an app to hack NASA</h4>
+                          <a href="https://tamilctf.s3.amazonaws.com/public/REVERSING/tamil_ctf.apk">>>apk</a>
+                        </div>
+                      </div>
+                </div>
+                <br><br>
+                <h1>WEB</h1>
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Akka University</h2>
+                        <h6>(50 Points)</h6>
+                        <h4> Due to COVID19 pandemic we are unable to conduct exams in offline.Download your questions and write it :)</h4>
+                        <a href="http://143.110.246.109:8000/" target="_blank">>>Click Me</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>CringeJS</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Decoding<br>Me</h4>
+                        <a href="http://143.110.246.109:8003/" target="_blank">>>Click Me</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>NotAPinterest</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Just a skeleton web,LoL I Love Images</h4>
+                        <a href="http://143.110.246.109:8005/" target="_blank">>>Click Me</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Delivery Boy</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Mail Me</h4>
+                        <a href="http://143.110.187.196:8007/" target="_blank">>>Click Me</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Welcome Gem</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Unlock the door with key</h4>
+                        <a href="http://143.110.187.196:8009/" target="_blank">>>Click Me</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                        <span></span>
+                        <div class="content">
+                          <h2>Choco Cookies</h2>
+                          <h6>(50 Points)</h6>
+                          <h4>QB eats only chocolate cookies</h4>
+                          <a href="https://at-lost.weatherkaroy.repl.co/" target="_blank">>>Click Me</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="card">
+                        <span></span>
+                        <div class="content">
+                          <h2>Cure Me</h2>
+                          <h6>(75 Points)</h6>
+                          <h4>A person is suffering from fever,give him medicine and try to cure him</h4>
+                          <a href="http://143.110.187.196:8010/" target="_blank">>>Click Me</a>
+                        </div>
+                      </div>
+                    </div>
+                <br><br>
+                <h1>FORENSICS</h1>
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>GitHub</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Hope you know about Git</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/FORENSICS/github.zip" download>>>github.zip</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Corrupt Pannitaanga Karna</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>The flag was corrupted by VN Hackers who hacked NASA.You should recover it...Oruthanaiyu vidaatha Karnaaaaaaaaaaaa</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/FORENSICS/cpk.zip" download>>>cpk</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>GoodBook</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Alan Walker learns Python</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/FORENSICS/goodbook.zip" download>>>goodbook.pdf</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Vellai Eluthu</h2>
+                        <h6>(75 Points)</h6>
+                        <h4>Everything you see is not true</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/FORENSICS/vellaieluthu.zip" download>>>vellaieluthu.jpg</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>A_PCAP_Packet</h2>
+                        <h6>(75 Points)</h6>
+                        <h4>APacket Of Sharks</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/FORENSICS/pcap.zip" download>>>a_pcap_packet.pcap</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>FCAT</h2>
+                        <h6>(100 Points)</h6>
+                        <h4>Magic Happens</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/FORENSICS/FCAT.zip" download>>>FCAT.zip</a>
+                      </div>
+                    </div>
+                </div>
+                <br><br>
+                <h1>CRYPTO</h1>
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Boss Image</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Building strong uh! BASEment um strong uh!<br>DM flag to Admin @CyberPJ</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/CRYPTO/bossimage.zip" download>>>bossimage.txt</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>FracMore</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>HINT : CAPSLOCK</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/CRYPTO/FracMore.zip" download>>>FracMore.txt</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Galaxy</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>FLASH:Galaxy has many substitute timelines<br>DM flag to Admin @SIN_GREED</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/CRYPTO/galaxy.zip" download>>>galaxy.png</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>RaaamSaAran</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>RaaamSaAran GF sent a message.Decrypt it!</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/CRYPTO/RaaamSaAran.zip" download>>>RaaamSaAran.txt</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Zippy</h2>
+                        <h6>(75 Points)</h6>
+                        <h4>ELLIOT: Are you 0 or 1</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/CRYPTO/zippy.zip" download>>>zippy.zip</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>DeSpacitoo</h2>
+                        <h6>(75 Points)</h6>
+                        <h4>Listen to DESpacitoo</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/CRYPTO/DeSpacitoo.zip" download>>>DeSpacitoo.txt</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>FlamA35</h2>
+                        <h6>(100 Points)</h6>
+                        <h4>File name speaks Hint</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/CRYPTO/FlamA35.zip" download>>>FlamA35.zip</a>
+                      </div>
+                    </div>
+                  </div>
+                <br><br>
+                <h1>STEGNO</h1>
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>0bsession</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Listen to STRna Beep Song(Beepsound)</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/STEGNO/0bsession.zip" download>>>0bsession.wav</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>2E</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Challenge is related to challenge name</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/STEGNO/2E.zip" download>>>2E.png</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Stegnanba</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Vanakkam Nanba! Lets hack NASA</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/STEGNO/stegnanba.zip" download>>>stegnanba.jpg</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>UFO Signal</h2>
+                        <h6>(50 Points)</h6>
+                        <h4>Watch the UFO signal again!</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/STEGNO/ufo.zip" download>>>ufo.wav</a>
+                      </div>
+                    </div>
+                  
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Stefano</h2>
+                        <h6>(100 Points)</h6>
+                        <h4>The one which you are seeking is hidden on another one</h4>
+                        <a href="https://tamilctf.s3.amazonaws.com/public/STEGNO/stefano.zip" download>>>stefano.mp3</a>
+                      </div>
+                    </div>
+                </div>
+                <br><br>
+                <h1>OSINT</h1>
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="card">
+                        <span></span>
+                        <div class="content">
+                          <h2>Vanakkam Nanba</h2>
+                          <h6>(50 Points)</h6>
+                          <h4>Newbie's Pokkisam Framework - for hacking mobiles</h4>
+                          <h1>VN</h1>
+                          <h1>VN</h1>
+                          <h1>VN</h1>
+                          <h1>VN</h1>
+                          <h1>VN</h1>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <span></span>
+                        <div class="content">
+                          <h2>Who is this?</h2>
+                          <h6>(50 Points)</h6>
+                          <h4>Want to know the registrar of LOF(Famous Infosec Youtuber) website.Submit it inside TamilCTF{registrarname}.Just NAME no corporate things</h4>
+                        </div>
+                      </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>A Marvellous Monument</h2>
+                        <h6>(75 Points)</h6>
+                        <h4>UNESCO World Heritage Site in Tamilnadu by Cho__.
+                            A modern traveller’s guide paves the way to the flag. Do
+                            we need reviews to know about the wonder of
+                            tamilnadu?but maybe you need so..<br><br>Hint: Unaku Ethuku</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center">
+                      <div class="card">
+                        <span></span>
+                        <div class="content">
+                          <h2>Photographer ah nanu?</h2>
+                          <h6>(50 Points)</h6>
+                          <h4>Use _ in between<br><br>HINT: I say Pixels, but it is not the actual hint </h4>
+                          <a href="https://tamilctf.s3.amazonaws.com/public/OSINT/OSINT.zip" download>>>osint.jpg</a>
+                        </div>
+                      </div>
+                    <div class="card">
+                      <span></span>
+                      <div class="content">
+                        <h2>Hunt Down</h2>
+                        <h6>(75 Points)</h6>
+                        <h4>HINT: OSINT TamilCTF 2021 Team</h4>
+                      </div>
+                    </div>
+                  </div>
+                <br><br>
+            </div>
+            <h1>SANITY CHECK</h1>
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="card">
+                        <span></span>
+                        <div class="content">
+                          <h2>Discord</h2>
+                          <h6>(25 Points)</h6>
+                          <h4>Search our server</h4>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <span></span>
+                        <div class="content">
+                          <h2>FeedBack</h2>
+                          <h6>(25 Points)</h6>
+                          <h4>Basic Web Recon<br>Please provide your valuable feedback with proper credentials.</h4>
+                          <a href="feedback.html">>>Click Me</a>
+                        </div>
+                      </div>
+                  </div>  
+                <br><br>
+            </div>
+		</section>
+	</main>
+	<!---->
+	<!-- <script src=".js/anime.min.js"></script> -->
+	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+	<script src="./js/home.js"></script>
+	<script src="./js/jquery/jquery-3.2.1.min.js"></script>
+	<script src="./js/countdowntime.js"></script>
+  <script>
+    hamburger = (event) => {
+      if (event)
+        event.preventDefault();
+      document.querySelector('.btn-hamburger').classList.toggle('open');
+      document.querySelector('.menu').classList.toggle('menu--open');
+      document.querySelector('html').classList.toggle('stop-scrolling');
+    }
+    window.onload = function () {
+      hideLoader();
+    }
+  
+    function hideLoader() {
+      let preloader = document.querySelector('#loading');
+      x = 0.01;
+      const fadeEffect = setInterval(() => {
+        if (!preloader.style.opacity) {
+          preloader.style.opacity = 1;
+        }
+        if (preloader.style.opacity >= 0.1) {
+          x *= 2;
+          preloader.style.opacity -= x;
+        } else {
+          preloader.style.opacity = 0;
+          preloader.style.display = 'none';
+          clearInterval(fadeEffect);
+        }
+      }, 50);
+    }
+  </script>
+</body>
+
+</html>
